@@ -1,0 +1,512 @@
+/*
+
+    Name:       Base16 Material Darker Light
+    Author:     Nate Peterson
+
+    CodeMirror template adapted for IPython Notebook by Nikhil Sonnad (https://github.com/nsonnad/base16-ipython-notebook)
+    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-chrome-devtools)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+/* Uncomment to use a custom font */
+div#notebook, div.CodeMirror, div.output_area pre, div.output_wrapper, div.prompt {
+  font-family: 'Source Code Pro', monospace !important;
+}
+
+/* GLOBALS */
+body {
+    color: #999;
+    background-color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a {
+    color: #82AAFF;
+}
+a:hover, a:focus {
+    color: #abc6ff;
+}
+
+.toolbar_info,
+.list_container {
+    color: #999;
+}
+
+.list_container {
+    border-color: #303030;
+    border-radius: 4px;
+}
+
+.list_container > div {
+    border-color: #303030;
+}
+
+.list_container input[type=checkbox] {
+    -webkit-appearance: none;
+    background: transparent;
+    border: 2px solid #6a7980;
+    box-shadow: none;
+    padding: 6px;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.list_container input[type=checkbox]:hover {
+    background-color: rgba(106, 121, 128, 0.25);
+}
+
+.list_container input[type=checkbox]:focus,
+.list_container input[type=checkbox]:checked:focus {
+    border-color: #89DDFF;
+    outline: none;
+    box-shadow: 0 0 5px 0 #abe7ff;
+}
+
+.list_container input[type=checkbox]:checked {
+    color: #303030;
+    border-color: #89DDFF;
+    background-color: #89DDFF;
+    box-shadow: none);
+}
+
+.list_container input[type=checkbox]:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    line-height: 1;
+    position: absolute;
+    top: -1px;
+    left: 1px;
+    color: #303030;
+}
+
+.list_item:hover {
+    color: #bbbbbb;
+    background: #212121;
+}
+
+.list_item .item_modified {
+    color: #6a7980;
+}
+
+.list_header {
+    background-color: #303030;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #353535;
+    border-radius: 1px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #EEFFFF;
+    font-weight: bold;
+    border-color: #353535;
+    background-color: #353535;
+}
+
+.nav-tabs > li > a:hover,
+.nav > li > a:hover,
+.nav > li > a:focus {
+    color: #EEFFFF;
+    border-color: #596d97;
+    background-color: #596d97;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #303030;
+    background-color: #a2cac6;
+}
+
+.dropdown-menu {
+    color: #303030;
+    background-color: #a2cac6;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #212121;
+    background-color: #7db2ad;
+}
+
+.dropdown-menu > li > a:hover:after,
+.dropdown-menu > li > a:focus:after {
+    color: #212121;
+}
+
+.dropdown-menu .divider {
+    background-color: #7db2ad;
+}
+
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+    color: #6b9995;
+}
+
+.modal-content {
+    background-color: #353535;
+}
+
+.cmd-palette form,
+.typeahead-field input:last-child,
+.typeahead-hint,
+.cmd-palette input,
+.typeahead-container button {
+    color: #B2CCD6;
+    border-color: #353535;
+    background: #353535;
+    box-shadow: none;
+}
+
+.typeahead-field input, .typeahead-select {
+    color: #B2CCD6;
+}
+
+.typeahead-container button, .typeahead-field input, .typeahead-select {
+    border-color: #353535;
+}
+
+.typeahead-container button:focus, .typeahead-container button:hover {
+    border-color: #465054;
+    background-color: #465054;
+}
+
+.typeahead-search-icon {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDklEQVR4AWJwL/ABlErWWBXFQADF3RaAQ0XLPqjZBF6zINxtAWjy8MnD3d36T+531yLJnMzMHfWe0bWb8hntDs0q0bPK/HmPNpuzWnpXDs5KsYl3vNf81nGrNTyyDp74R/antg4a4gKIHHDmnVHSNb4rVRzkMN1+vEzySDvgPLWzUxdtwF8YpDcGQM0oiZaoTnT+cjbjAMwfSlJOBECHDba5Aj5zKmFGi5OoiSjdVE2c0WY4BsBorFICkERj5Mw7bmcMwBfFbQ5Akh4llyxdDIBDJsyZUflX+ZOaSZvI9r32Q+7n1GFHDCDVmXEO2y3kGQgvmWQE4BDZZvkGZHrLdGcMCGSC8+iopzAAyOn8A9mR6FEfiGE1AAAAAElFTkSuQmCC) center center no-repeat;
+}
+
+.typeahead-dropdown,
+.typeahead-list {
+    color: #B2CCD6;
+    border-color: #353535;
+    background: #353535;
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.5)
+}
+
+.typeahead-dropdown>li>a,
+.typeahead-list>li>a {
+    color: #B2CCD6;
+}
+
+.typeahead-dropdown>li.active>a,
+.typeahead-dropdown>li>a:focus,
+.typeahead-dropdown>li>a:hover,
+.typeahead-list>li.active>a,
+.typeahead-list>li>a:focus,
+.typeahead-list>li>a:hover {
+    color: #ffe9bf;
+    background-color: #756444;
+}
+
+.typeahead-list>li.typeahead-group.active>a,
+.typeahead-list>li.typeahead-group>a,
+.typeahead-list>li.typeahead-group>a:focus,
+.typeahead-list>li.typeahead-group>a:hover {
+    font-weight: bold;
+    color: #8ba0a8;
+    background-color: #212121;
+}
+
+.typeahead-list>li.typeahead-group>a:after {
+    content: ':';
+}
+
+.typeahead-dropdown>li.active>a kbd,
+.typeahead-dropdown>li>a:focus kbd,
+.typeahead-dropdown>li>a:hover kbd,
+.typeahead-list>li.active>a kbd,
+.typeahead-list>li>a:focus kbd,
+.typeahead-list>li>a:hover kbd {
+    color: #ccbb99;
+}
+
+.typeahead-dropdown>li.active>a .command-shortcut:before,
+.typeahead-dropdown>li>a:focus .command-shortcut:before,
+.typeahead-dropdown>li>a:hover .command-shortcut:before,
+.typeahead-list>li.active>a .command-shortcut:before,
+.typeahead-list>li>a:focus .command-shortcut:before,
+.typeahead-list>li>a:hover .command-shortcut:before {
+    color: #a89a7e;
+}
+
+.typeahead-list code {
+    color: #353535;
+    background: #6DCCC4;
+}
+
+.typeahead-list::-webkit-scrollbar-track {
+    background: #353535;
+}
+
+/* INTRO PAGE */
+.toolbar_info, .list_container {color: #EEFFFF;}
+
+/* NOTEBOOK */
+
+/* comment out this line to bring the toolbar back */
+/*div#header {display: none !important;}*/
+#header-container,
+#header > .header-bar,
+body > #header #header-container {
+    display: none !important;
+}
+
+#notebook {
+    border-top: none;
+}
+
+body > #header,
+.notebook_app > #header {
+    background-color: #212121;
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0, 0.2),
+                0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+#menubar .navbar {
+    border: 0;
+    border-radius: 0 0 4px 4px;
+    background: #303030;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #a2cac6;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ffe9bf;
+    background: #756444;
+}
+
+.notification_widget,
+.notification_widget:hover {
+    color: #303030;
+    border: 0;
+    border-radius: 2px;
+    background-color: #6DCCC4;
+}
+
+.notification_widget.info,
+.notification_widget.info:hover {
+    color: #303030;
+    background: #82AAFF;
+}
+
+.notification_widget.warning,
+.notification_widget.warning:hover {
+    color: #303030;
+    background: #F78C6C;
+}
+
+.btn-default {
+    color: #a2cac6;
+    border-color: #303030;
+    background: #303030;
+}
+
+.btn-default:hover {
+    color: #ffe9bf;
+    border-color: #756444;
+    background: #756444;
+}
+
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus, .btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+    color: #303030;
+    border-color: #ffe9bf;
+    background-color: #ffe9bf;
+}
+
+.form-control {
+    color: #a2cac6;
+    border-color: #303030;
+    background-color: #303030;
+}
+
+div.input_prompt {color: #FF5370;}
+div.output_prompt {color: #C792EA;}
+div.input_area {
+  border-radius: 4px;
+
+  border: 2px solid #212121;
+
+  /* Uncomment line below for more contrast */
+  /*border-color: 2px solid #303030;*/
+}
+div.output_area pre {font-weight: normal; color: #EEFFFF;}
+
+.rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
+  border: 1px  #EEFFFF solid;
+  color: #EEFFFF;
+}
+div.output_html { font-family: sans-serif; }
+table.dataframe tr {border: 1px #EEFFFF;}
+
+div.cell.selected {border-radius: 0px;}
+div.cell.edit_mode {border-radius: 0px; border: thin solid #C792EA;}
+div.text_cell_render, div.output_html {color: #EEFFFF;}
+
+span.ansiblack,
+span.ansi-black-fg,
+span.ansi-black-intense-fg {color: #303030;}
+span.ansiblue,
+span.ansi-blue-fg,
+span.ansi-blue-intense-fg {color: #89DDFF;}
+span.ansigray,
+span.ansi-gray-fg,
+span.ansi-gray-intense-fg {color: #B2CCD6;}
+span.ansigreen,
+span.ansi-green-fg,
+span.ansi-green-intense-fg {color: #C3E88D;}
+span.ansipurple,
+span.ansi-purple-fg,
+span.ansi-purple-intense-fg {color: #C792EA;}
+span.ansired,
+span.ansi-red-fg,
+span.ansi-red-intense-fg {color: #F07178;}
+span.ansiyellow,
+span.ansi-yellow-fg,
+span.ansi-yellow-intense-fg {color: #FFCB6B;}
+
+div.output_stderr {background-color: #F07178;}
+div.output_stderr pre {color: #EEFFFF;}
+
+.cm-s-ipython.CodeMirror {
+    color: #EEFFFF;
+    border-radius: 4px;
+    background: #212121;
+}
+.cm-s-ipython div.CodeMirror-selected {background: #303030 !important;}
+.cm-s-ipython .CodeMirror-gutters {background: #212121; border-right: 0px;}
+.cm-s-ipython .CodeMirror-linenumber {color: #4A4A4A;}
+.cm-s-ipython .CodeMirror-cursor {border-left: 1px solid #B2CCD6 !important;}
+
+.cm-s-ipython span.cm-comment {color: #FF5370;}
+.cm-s-ipython span.cm-atom {color: #C792EA;}
+.cm-s-ipython span.cm-number {color: #C792EA;}
+
+.cm-s-ipython span.cm-property, .cm-s-ipython span.cm-attribute {color: #C3E88D;}
+.cm-s-ipython span.cm-keyword {color: #F07178;}
+.cm-s-ipython span.cm-string {color: #FFCB6B;}
+.cm-s-ipython span.cm-operator {color: #FF5370;}
+.cm-s-ipython span.cm-builtin {color: #C792EA;}
+
+.cm-s-ipython span.cm-variable {color: #C3E88D;}
+.cm-s-ipython span.cm-variable-2 {color: #82AAFF;}
+.cm-s-ipython span.cm-def {color: #F78C6C;}
+.cm-s-ipython span.cm-error {background: #F07178; color: #B2CCD6;}
+.cm-s-ipython span.cm-bracket {color: #EEFFFF;}
+.cm-s-ipython span.cm-tag {color: #F07178;}
+.cm-s-ipython span.cm-link {color: #C792EA;}
+
+.cm-s-ipython .CodeMirror-matchingbracket { text-decoration: underline; color: #EEFFFF !important;}
+
+
+/* Fritz's customizations */
+
+/*Otherwise, a lot of backgrounds are white.*/
+div#notebook {
+    background-color: #1A1A1A; /* #212121; */
+    border-top: none;
+}
+div#notebook-container {
+    background-color: #1A1A1A; /* #303030; */
+    box-shadow: none;
+}
+
+/*Don't need to see jupyter logo, filename, last saved, etc.*/
+div#header-container { display: none; }
+
+/*This prevents scrollable output from having an ugly grey
+shadow around it*/
+div.output.output_scroll {
+    box-shadow: none;
+}
+
+/*Scroll bars*/
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 0.25em solid rgba(0, 0, 0, 0);
+    border-radius: 0.5em;
+    background: rgba(255, 255, 255, 0.2);
+    background-clip: padding-box;
+}
+
+
+/* give strings a bit of highlight */
+.cm-s-ipython span.cm-string {
+    color: #f9ee98;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: rgba(249, 238, 152, 0.05);
+    border-radius: 3px;
+}
+
+/* Make comments grey, not italic, and give them an easy background */
+.cm-s-ipython span.cm-comment {
+    color: #4A4A4A;
+}
+
+/* change the color of the cursor */
+.cm-s-ipython .CodeMirror-cursor {
+    width: 2px;
+    background-color: #F78C6C;
+    /* margin-top: 2px; */
+}
+
+.code_cell > .input > .inner_cell > .input_area {
+    background-color: #1A1A1A;
+}
+
+div.cell.selected {
+    border-color: #82AAFF;
+    border-radius: 6px;
+}
+
+.CodeMirror-code  {
+    line-height: 1.375;
+}
+
+div.output_`area {
+    margin-left: 20px;
+}
+
+div.output_text {
+    margin-left: 20px;
+    border-left: 4px solid #4A4A4A;
+    border-bottom-right-radius: 4px;;
+}
+
+div.output_error {
+    /* base["07"] */
+    border-left-color: rgba(240, 113, 120, 0.33);
+    background: rgba(240, 113, 120, 0.1);
+}
+
+.CodeMirror-lines {
+    background-color: #212121;
+}
+
+div.out_prompt_overlay:hover {
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.1);
+}
